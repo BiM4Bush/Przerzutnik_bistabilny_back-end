@@ -10,23 +10,8 @@ namespace Kanban
     {
         static void Main(string[] args)
         {
-            string appName = "Kanban table";
-            int appVersion = 1;
-            string [] authors = new string [6];
-            authors[0] = "Sebastian Krzynówek";
-            authors[1] = "Mateusz Kowalewski";
-            authors[2] = "Paweł Kulesza";
-            authors[3] = "Marcin Kozłowski";
-            authors[4] = "Marcin Krzemiński";
-            authors[5] = "Michał Wołyniec";
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine($"Aplikacja {appName}. Wersja {appVersion}.");
-            Console.Write("Authors: ");
-            foreach (string author in authors)
-            {
-                Console.Write(author+ "  "); 
-            }
-            Console.ResetColor();
+            GetAppInfo();
+
             Column ToDo = new Column("To do");
             Column InProgress = new Column("In progress");
             Column Testing = new Column("Testing");
@@ -81,6 +66,26 @@ namespace Kanban
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Press any key to exit console application");
             Console.ReadKey();
+        }
+        public static void GetAppInfo()
+        {
+            string appName = "Kanban table";
+            int appVersion = 1;
+            string[] authors = new string[6];
+            authors[0] = "Sebastian Krzynówek";
+            authors[1] = "Mateusz Kowalewski";
+            authors[2] = "Paweł Kulesza";
+            authors[3] = "Marcin Kozłowski";
+            authors[4] = "Marcin Krzemiński";
+            authors[5] = "Michał Wołyniec";
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine($"Aplikacja {appName}. Wersja {appVersion}.");
+            Console.Write("Authors: ");
+            foreach (string author in authors)
+            {
+                Console.Write(author + "  ");
+            }
+            Console.ResetColor();
         }
         public static void AddNoteToColumn(Dictionary<Note, Column> dict , Note key, Column value)
         {

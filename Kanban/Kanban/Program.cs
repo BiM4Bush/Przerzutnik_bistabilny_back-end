@@ -77,21 +77,24 @@ namespace Kanban
             {
                 Console.WriteLine("Note {0} is in Column {1}", kvp.Key.name, kvp.Value.name);
             }
+
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Press any key to exit console application");
             Console.ReadKey();
         }
-        public static void AddNoteToColumn(Dictionary<Note, Column> a , Note key, Column value)
+        public static void AddNoteToColumn(Dictionary<Note, Column> dict , Note key, Column value)
         {
-            a.Add(key, value);
+            dict.Add(key, value);
         }
-        public static void RemoveNoteFromColumn(Dictionary<Note, Column> a, Note key)
+        public static void RemoveNoteFromColumn(Dictionary<Note, Column> dict, Note key)
         {
-            a.Remove(key);
+            dict.Remove(key);
         }
 
-        public static void ChangeColumnForNote(Dictionary<Note, Column> a, Note key, Column value)
+        public static void ChangeColumnForNote(Dictionary<Note, Column> dict, Note key, Column value)
         {
-            RemoveNoteFromColumn(a, key);
-            a.Add(key, value);
+            RemoveNoteFromColumn(dict, key);
+            dict.Add(key, value);
         }
     }
 

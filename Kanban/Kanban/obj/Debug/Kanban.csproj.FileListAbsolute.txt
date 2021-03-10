@@ -5,3 +5,10 @@ C:\Users\sebak\Desktop\Projekt zespołowy Billenium\back-end\Kanban\Kanban\obj\D
 C:\Users\sebak\Desktop\Projekt zespołowy Billenium\back-end\Kanban\Kanban\obj\Debug\Kanban.csproj.CoreCompileInputs.cache
 C:\Users\sebak\Desktop\Projekt zespołowy Billenium\back-end\Kanban\Kanban\obj\Debug\Kanban.exe
 C:\Users\sebak\Desktop\Projekt zespołowy Billenium\back-end\Kanban\Kanban\obj\Debug\Kanban.pdb
+C:\Users\sebak\Source\Repos\BiM4Bush\Przerzutnik_bistabilny_back-end\Kanban\Kanban\bin\Debug\Kanban.exe.config
+C:\Users\sebak\Source\Repos\BiM4Bush\Przerzutnik_bistabilny_back-end\Kanban\Kanban\bin\Debug\Kanban.exe
+C:\Users\sebak\Source\Repos\BiM4Bush\Przerzutnik_bistabilny_back-end\Kanban\Kanban\bin\Debug\Kanban.pdb
+C:\Users\sebak\Source\Repos\BiM4Bush\Przerzutnik_bistabilny_back-end\Kanban\Kanban\obj\Debug\Kanban.csprojAssemblyReference.cache
+C:\Users\sebak\Source\Repos\BiM4Bush\Przerzutnik_bistabilny_back-end\Kanban\Kanban\obj\Debug\Kanban.csproj.CoreCompileInputs.cache
+C:\Users\sebak\Source\Repos\BiM4Bush\Przerzutnik_bistabilny_back-end\Kanban\Kanban\obj\Debug\Kanban.exe
+C:\Users\sebak\Source\Repos\BiM4Bush\Przerzutnik_bistabilny_back-end\Kanban\Kanban\obj\Debug\Kanban.pdb

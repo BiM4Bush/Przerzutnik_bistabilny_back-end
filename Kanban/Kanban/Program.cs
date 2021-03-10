@@ -32,36 +32,66 @@ namespace Kanban
             Column Testing = new Column("Testing");
             Column Done = new Column("Done");
 
-            Note A = new Note("A", "Pierwsza karteczka", Testing);
-            Note B = new Note("B", "Druga karteczka", Testing);
-            Note C = new Note("C", " ", Testing);
-            Note D = new Note("D", " ", InProgress);
-            Note F = new Note("F", " ", ToDo);
-            Note H = new Note("H", " ", InProgress);
-            Note I = new Note("I", " ", InProgress);
-            Note K = new Note("K", " ", Done);
-            Note S = new Note("S", " ", ToDo);
+            Note A = new Note("A", "Pierwsza karteczka");
+            Note B = new Note("B", "Druga karteczka");
+            Note C = new Note("C", " ");
+            Note D = new Note("D", " ");
+            Note F = new Note("F", " ");
+            Note H = new Note("H", " ");
+            Note I = new Note("I", " ");
+            Note K = new Note("K", " ");
+            Note S = new Note("S", " ");
 
-            var Kanban = new Dictionary<string, string>()
-            {
-                {F.name, ToDo.name},
-                {S.name, ToDo.name},
-                {D.name, InProgress.name},
-                {H.name, InProgress.name},
-                {I.name, InProgress.name},
-                {A.name, Testing.name},
-                {B.name, Testing.name},
-                {C.name, Testing.name},
-                {K.name, Done.name}
-            };
+            var Kanban = new Dictionary<Note, Column>();
 
-            foreach (KeyValuePair<string, string> kvp in Kanban)
+            AddNoteToColumn(Kanban, A, Testing);
+            AddNoteToColumn(Kanban, B, Testing);
+            AddNoteToColumn(Kanban, C, Testing);
+            AddNoteToColumn(Kanban, D, InProgress);
+            AddNoteToColumn(Kanban, F, ToDo);
+            AddNoteToColumn(Kanban, H, InProgress);
+            AddNoteToColumn(Kanban, I, InProgress);
+            AddNoteToColumn(Kanban, K, Done);
+            AddNoteToColumn(Kanban, S, ToDo);
+
+
+            foreach (KeyValuePair<Note, Column> kvp in Kanban)
             {
-                Console.WriteLine("Karteczka {0} jest w kolumnie {1}", kvp.Key, kvp.Value);
+                Console.WriteLine("Note {0} is in Column {1}", kvp.Key.name, kvp.Value.name);
             }
 
+            Console.WriteLine("Looking if A note was moved to Done column");
 
+            ChangeColumnForNote(Kanban, A, Done);
+
+            foreach (KeyValuePair<Note, Column> kvp in Kanban)
+            {
+                Console.WriteLine("Note {0} is in Column {1}", kvp.Key.name, kvp.Value.name);
+            }
+
+            Console.WriteLine("Looking if A be removed from Kanban table");
+
+            RemoveNoteFromColumn(Kanban, A);
+
+            foreach (KeyValuePair<Note, Column> kvp in Kanban)
+            {
+                Console.WriteLine("Note {0} is in Column {1}", kvp.Key.name, kvp.Value.name);
+            }
             Console.ReadKey();
+        }
+        public static void AddNoteToColumn(Dictionary<Note, Column> a , Note key, Column value)
+        {
+            a.Add(key, value);
+        }
+        public static void RemoveNoteFromColumn(Dictionary<Note, Column> a, Note key)
+        {
+            a.Remove(key);
+        }
+
+        public static void ChangeColumnForNote(Dictionary<Note, Column> a, Note key, Column value)
+        {
+            RemoveNoteFromColumn(a, key);
+            a.Add(key, value);
         }
     }
 
@@ -79,14 +109,14 @@ namespace Kanban
     {
         public string name;
         private string description;
-        private Column column;
 
-        public Note(string name, string description, Column column)
+        public Note(string name, string description)
         {
             this.name = name;
             this.description = description;
-            this.column = column;
         }
 
     }
+
 }
+

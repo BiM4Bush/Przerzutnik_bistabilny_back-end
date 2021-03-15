@@ -26,20 +26,25 @@ namespace Kanban
             Note I = new Note("I", " ");
             Note K = new Note("K", " ");
             Note S = new Note("S", " ");
-
+            
             var Kanban = new Dictionary<Note, Column>();
 
-            AddNoteToColumn(Kanban, A, Testing);
-            AddNoteToColumn(Kanban, B, Testing);
-            AddNoteToColumn(Kanban, C, Testing);
-            AddNoteToColumn(Kanban, D, InProgress);
+            Person Steve = new Person("Steve Jobs");
+
+            var WorkPlan = new Dictionary<Note, Person>();
+
+            StickPersonToNote(WorkPlan, A, Steve);
+            StickPersonToNote(WorkPlan, A, Steve);
+
+            AddNoteToColumn(Kanban, A, ToDo);
+            AddNoteToColumn(Kanban, B, ToDo);
+            AddNoteToColumn(Kanban, C, ToDo);
+            AddNoteToColumn(Kanban, D, ToDo);
             AddNoteToColumn(Kanban, F, ToDo);
-            AddNoteToColumn(Kanban, H, InProgress);
-            AddNoteToColumn(Kanban, I, InProgress);
-            AddNoteToColumn(Kanban, K, Done);
+            AddNoteToColumn(Kanban, H, ToDo);
+            AddNoteToColumn(Kanban, I, ToDo);
+            AddNoteToColumn(Kanban, K, ToDo);
             AddNoteToColumn(Kanban, S, ToDo);
-
-
             foreach (KeyValuePair<Note, Column> kvp in Kanban)
             {
                 Console.WriteLine("Note {0} is in Column {1}", kvp.Key.name, kvp.Value.name);
@@ -95,11 +100,22 @@ namespace Kanban
         {
             dict.Remove(key);
         }
-
         public static void ChangeColumnForNote(Dictionary<Note, Column> dict, Note key, Column value)
         {
             RemoveNoteFromColumn(dict, key);
             dict.Add(key, value);
+        }
+        public static void StickPersonToNote(Dictionary<Note, Person> dict, Note key, Person value)
+        {
+            if(!dict.ContainsKey(key))
+            {
+                dict.Add(key, value);
+            }
+            else
+            {
+                Console.WriteLine("Someone got this already");
+            }
+
         }
     }
 
@@ -117,13 +133,22 @@ namespace Kanban
     {
         public string name;
         private string description;
-
+        
         public Note(string name, string description)
         {
             this.name = name;
             this.description = description;
         }
 
+    }
+    public class Person
+    {
+        public string nick;
+
+        public Person(string nick)
+        {
+            this.nick = nick;
+        }
     }
 
 }

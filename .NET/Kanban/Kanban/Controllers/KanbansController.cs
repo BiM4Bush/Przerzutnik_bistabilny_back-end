@@ -89,7 +89,7 @@ namespace Kanban.Controllers
 
         // POST: api/KanbanPosts
         [HttpPost]
-        public async Task<IActionResult> PostBlogPost([FromBody] KanbanPost kanbanPost)
+        public async Task<IActionResult> PostKanbanPost([FromBody] KanbanPost kanbanPost)
         {
             if (!ModelState.IsValid)
             {
@@ -99,7 +99,7 @@ namespace Kanban.Controllers
             _repo.Add(kanbanPost);
             var save = await _repo.SaveAsync(kanbanPost);
 
-            return CreatedAtAction("GetBlogPost", new { id = kanbanPost.KanbanId }, kanbanPost);
+            return CreatedAtAction("GetKanbanPost", new { id = kanbanPost.KanbanId }, kanbanPost);
         }
 
         // DELETE: api/KanbanPosts/5

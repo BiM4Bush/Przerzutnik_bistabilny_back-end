@@ -14,11 +14,11 @@ namespace Kanban.Models
         [Required]
         public string Name { get; set; }
 
-        [Required ]
-        public Column Column { get; set; }
+        [Required]
+        public List<Column> Columns{ get; set; }
 
         [Required] 
-        public Note Note { get; set; }
+        public List<Note> Notes { get; set; }
 
     }
 }

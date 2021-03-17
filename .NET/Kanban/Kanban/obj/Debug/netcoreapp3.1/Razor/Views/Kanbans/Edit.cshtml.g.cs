@@ -13,7 +13,7 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5d08339597d76ad2afc91981a8790212675e3404", @"/Views/Kanbans/Edit.cshtml")]
-    public class Views_Kanbans_Edit : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Kanban.Models.KanbanPost>
+    public class Views_Kanbans_Edit : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Kanban.Models.KanbanBoard>
     {
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
@@ -76,7 +76,7 @@ namespace AspNetCore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
         public global::Microsoft.AspNetCore.Mvc.Rendering.IJsonHelper Json { get; private set; }
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<Kanban.Models.KanbanPost> Html { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<Kanban.Models.KanbanBoard> Html { get; private set; }
     }
 }
 #pragma warning restore 1591

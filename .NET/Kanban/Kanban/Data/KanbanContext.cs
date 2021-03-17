@@ -14,6 +14,12 @@ namespace Kanban.Data
         {
         }
 
-        public DbSet<Kanban.Models.KanbanPost> Kanban { get; set; }
+        public DbSet<Kanban.Models.KanbanBoard> Kanban { get; set; }
+
+        public DbSet<Kanban.Models.Person> Person { get; set; }
+
+        public DbSet<Kanban.Models.Note> Note { get; set; }
+
+        public DbSet<Kanban.Models.Column> Column { get; set; }
     }
 }

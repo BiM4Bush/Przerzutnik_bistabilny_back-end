@@ -14,5 +14,8 @@ namespace Kanban.Models
         [Required]
         public string Name { get; set; }
 
+        [Required]
+        public List<Note> Notes { get; set; }
+
     }
 }

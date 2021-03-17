@@ -151,3 +151,13 @@ C:\Users\sebak\source\repos\BiM4Bush\Przerzutnik_bistabilny_back-end\.NET\Kanban
 C:\Users\sebak\source\repos\BiM4Bush\Przerzutnik_bistabilny_back-end\.NET\Kanban\Kanban\obj\Debug\netcoreapp3.1\Razor\Views\Kanbans\Details.cshtml.g.cs
 C:\Users\sebak\source\repos\BiM4Bush\Przerzutnik_bistabilny_back-end\.NET\Kanban\Kanban\obj\Debug\netcoreapp3.1\Razor\Views\Kanbans\Edit.cshtml.g.cs
 C:\Users\sebak\source\repos\BiM4Bush\Przerzutnik_bistabilny_back-end\.NET\Kanban\Kanban\obj\Debug\netcoreapp3.1\Razor\Views\Kanbans\Index.cshtml.g.cs
+C:\Users\sebak\source\repos\BiM4Bush\Przerzutnik_bistabilny_back-end\.NET\Kanban\Kanban\obj\Debug\netcoreapp3.1\Razor\Views\People\Create.cshtml.g.cs
+C:\Users\sebak\source\repos\BiM4Bush\Przerzutnik_bistabilny_back-end\.NET\Kanban\Kanban\obj\Debug\netcoreapp3.1\Razor\Views\People\Delete.cshtml.g.cs
+C:\Users\sebak\source\repos\BiM4Bush\Przerzutnik_bistabilny_back-end\.NET\Kanban\Kanban\obj\Debug\netcoreapp3.1\Razor\Views\People\Details.cshtml.g.cs
+C:\Users\sebak\source\repos\BiM4Bush\Przerzutnik_bistabilny_back-end\.NET\Kanban\Kanban\obj\Debug\netcoreapp3.1\Razor\Views\People\Edit.cshtml.g.cs
+C:\Users\sebak\source\repos\BiM4Bush\Przerzutnik_bistabilny_back-end\.NET\Kanban\Kanban\obj\Debug\netcoreapp3.1\Razor\Views\People\Index.cshtml.g.cs
+C:\Users\sebak\source\repos\BiM4Bush\Przerzutnik_bistabilny_back-end\.NET\Kanban\Kanban\obj\Debug\netcoreapp3.1\Razor\Views\Columns\Create.cshtml.g.cs
+C:\Users\sebak\source\repos\BiM4Bush\Przerzutnik_bistabilny_back-end\.NET\Kanban\Kanban\obj\Debug\netcoreapp3.1\Razor\Views\Columns\Delete.cshtml.g.cs
+C:\Users\sebak\source\repos\BiM4Bush\Przerzutnik_bistabilny_back-end\.NET\Kanban\Kanban\obj\Debug\netcoreapp3.1\Razor\Views\Columns\Details.cshtml.g.cs
+C:\Users\sebak\source\repos\BiM4Bush\Przerzutnik_bistabilny_back-end\.NET\Kanban\Kanban\obj\Debug\netcoreapp3.1\Razor\Views\Columns\Edit.cshtml.g.cs
+C:\Users\sebak\source\repos\BiM4Bush\Przerzutnik_bistabilny_back-end\.NET\Kanban\Kanban\obj\Debug\netcoreapp3.1\Razor\Views\Columns\Index.cshtml.g.cs

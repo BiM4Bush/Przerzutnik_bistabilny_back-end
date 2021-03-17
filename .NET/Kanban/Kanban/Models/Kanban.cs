@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kanban.Models
 {
-    public class KanbanPost
+    public class KanbanBoard
     {
         [Key]
         public int KanbanId { get; set; }

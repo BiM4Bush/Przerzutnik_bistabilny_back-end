@@ -4,14 +4,16 @@ using Kanban.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Kanban.Migrations
 {
     [DbContext(typeof(KanbanContext))]
-    partial class KanbanContextModelSnapshot : ModelSnapshot
+    [Migration("20210317110152_Migrate6")]
+    partial class Migrate6
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -63,9 +65,6 @@ namespace Kanban.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("ColumnId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -81,8 +80,6 @@ namespace Kanban.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("NoteId");
-
-                    b.HasIndex("ColumnId");
 
                     b.HasIndex("KanbanBoardKanbanId");
 
@@ -116,10 +113,6 @@ namespace Kanban.Migrations
 
             modelBuilder.Entity("Kanban.Models.Note", b =>
                 {
-                    b.HasOne("Kanban.Models.Column", null)
-                        .WithMany("Notes")
-                        .HasForeignKey("ColumnId");
-
                     b.HasOne("Kanban.Models.KanbanBoard", null)
                         .WithMany("Notes")
                         .HasForeignKey("KanbanBoardKanbanId");

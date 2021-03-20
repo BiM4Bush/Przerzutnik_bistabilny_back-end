@@ -4,14 +4,16 @@ using Kanban.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Kanban.Migrations
 {
     [DbContext(typeof(KanbanContext))]
-    partial class KanbanContextModelSnapshot : ModelSnapshot
+    [Migration("20210320135726_Migrate11")]
+    partial class Migrate11
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -51,7 +53,12 @@ namespace Kanban.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("OwneruserId")
+                        .HasColumnType("int");
+
                     b.HasKey("KanbanId");
+
+                    b.HasIndex("OwneruserId");
 
                     b.ToTable("Kanban");
                 });
@@ -132,6 +139,15 @@ namespace Kanban.Migrations
                     b.HasOne("Kanban.Models.KanbanBoard", null)
                         .WithMany("Columns")
                         .HasForeignKey("KanbanBoardKanbanId");
+                });
+
+            modelBuilder.Entity("Kanban.Models.KanbanBoard", b =>
+                {
+                    b.HasOne("Kanban.Models.User", "Owner")
+                        .WithMany()
+                        .HasForeignKey("OwneruserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Kanban.Models.Note", b =>

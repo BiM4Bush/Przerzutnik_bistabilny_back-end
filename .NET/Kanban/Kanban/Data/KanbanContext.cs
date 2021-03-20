@@ -21,5 +21,7 @@ namespace Kanban.Data
         public DbSet<Kanban.Models.Note> Note { get; set; }
 
         public DbSet<Kanban.Models.Column> Column { get; set; }
+
+        public DbSet<Kanban.Models.User> User { get; set; }
     }
 }

@@ -161,3 +161,8 @@ C:\Users\sebak\source\repos\BiM4Bush\Przerzutnik_bistabilny_back-end\.NET\Kanban
 C:\Users\sebak\source\repos\BiM4Bush\Przerzutnik_bistabilny_back-end\.NET\Kanban\Kanban\obj\Debug\netcoreapp3.1\Razor\Views\Columns\Details.cshtml.g.cs
 C:\Users\sebak\source\repos\BiM4Bush\Przerzutnik_bistabilny_back-end\.NET\Kanban\Kanban\obj\Debug\netcoreapp3.1\Razor\Views\Columns\Edit.cshtml.g.cs
 C:\Users\sebak\source\repos\BiM4Bush\Przerzutnik_bistabilny_back-end\.NET\Kanban\Kanban\obj\Debug\netcoreapp3.1\Razor\Views\Columns\Index.cshtml.g.cs
+C:\Users\sebak\source\repos\BiM4Bush\Przerzutnik_bistabilny_back-end\.NET\Kanban\Kanban\obj\Debug\netcoreapp3.1\Razor\Views\Users\Create.cshtml.g.cs
+C:\Users\sebak\source\repos\BiM4Bush\Przerzutnik_bistabilny_back-end\.NET\Kanban\Kanban\obj\Debug\netcoreapp3.1\Razor\Views\Users\Delete.cshtml.g.cs
+C:\Users\sebak\source\repos\BiM4Bush\Przerzutnik_bistabilny_back-end\.NET\Kanban\Kanban\obj\Debug\netcoreapp3.1\Razor\Views\Users\Details.cshtml.g.cs
+C:\Users\sebak\source\repos\BiM4Bush\Przerzutnik_bistabilny_back-end\.NET\Kanban\Kanban\obj\Debug\netcoreapp3.1\Razor\Views\Users\Edit.cshtml.g.cs
+C:\Users\sebak\source\repos\BiM4Bush\Przerzutnik_bistabilny_back-end\.NET\Kanban\Kanban\obj\Debug\netcoreapp3.1\Razor\Views\Users\Index.cshtml.g.cs
